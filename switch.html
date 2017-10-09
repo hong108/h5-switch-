@@ -3,17 +3,39 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Hello</title>
-    <link rel="stylesheet" href="css.css">
+		<link rel="stylesheet" href="css.css">
 		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	</head>
 
 	<body>
   
   
-    <div class="switch switch-on">
-      <div class="switch-btn"></div>
-    </div>
+		<div class="switch switch-on">
+	    		<div class="switch-btn"></div>
+		</div>
+    		<script>
+			$(document).ready(function(){
+				$(".switch .switch-btn").click(function(){
+			    if($(this).parent().hasClass('switch-on')){
+				$(this).animate({width:"50px"},function(){
+				$(this).parent().removeClass('switch-on').addClass('switch-off');
+			      });
+				$(this).animate({width:'36px'},function(){
+				$(this).parent().addClass("on");
+			      }); 
+			      console.log('switch close');
+			    }else{
+				$(this).animate({width:"50px"},function(){
+				$(this).parent().removeClass('switch-off').addClass('switch-on');
+			      });
+				$(this).animate({width:'36px'},function(){
+				 $(this).parent().removeClass("on");
+			      });
+			      console.log('switch open');
+			    }
+			  });
+			});
+		</script>
     
-    
-  </body>
+	</body>
 </html>
