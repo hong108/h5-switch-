@@ -1,0 +1,27 @@
+.switch{
+  width:60px;
+  height:40px;
+  border:1px solid #ccc;
+  box-shadow: 1px 1px 5px #ddd;
+  border-radius:20px;
+  position:relative;
+}
+.switch .switch-btn{
+  width:36px;
+  height:36px;
+  border:1px solid #ccc;
+  border-radius:18px; 
+  background:#fff;
+  position:absolute;
+  top:1px;
+}
+.switch-on{
+  background:green;
+}
+.switch-on .switch-btn{
+  left:1px;
+}
+.switch-off{}
+.switch-off .switch-btn{
+  right:1px;
+}
